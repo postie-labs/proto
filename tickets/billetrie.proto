@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+// Service
+service Billetterie {
+    rpc Issue(IssueRequest) returns (IssueResponse) {}
+    rpc Transfer(TransferRequest) returns (TransferResponse) {}
+    rpc Verify(VerifyRequest) returns (VerifyResponse) {}
+}
+
+// Message
+message IssueRequest {
+    string issuer = 1;
+    bytes data = 2;
+}
+
+message IssueResponse {
+    string ticket_hash = 1;
+    Error error = 2;
+}
+
+message TransferRequest {
+    string owner_from = 1;
+    string owner_to = 2;
+    string ticket_hash = 3;
+}
+
+message TransferResponse {
+    bool transfered = 1;
+    Error error = 2;
+}
+
+message VerifyRequest {
+    string owner = 1;
+    string ticket_hash = 2;
+}
+
+message VerifyResponse {
+    bool verified = 1;
+    Error error = 2;
+}
+
+message Error {
+    uint32 code = 1;
+    string info = 2;
+}
