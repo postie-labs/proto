@@ -27,7 +27,7 @@ message TransferRequest {
 }
 
 message TransferResponse {
-    bool transfered = 1;
+    bool transferred = 1;
     Error error = 2;
 }
 
