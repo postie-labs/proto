@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+option go_package = "google.golang.org/grpc/examples/route_guide/routeguide";
+
 // Service
 service Billetterie {
     rpc Issue(IssueRequest) returns (IssueResponse) {}
