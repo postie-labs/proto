@@ -17,7 +17,6 @@ message IssueRequest {
 
 message IssueResponse {
     string ticket_hash = 1;
-    Error error = 2;
 }
 
 message TransferRequest {
@@ -28,7 +27,6 @@ message TransferRequest {
 
 message TransferResponse {
     bool transferred = 1;
-    Error error = 2;
 }
 
 message VerifyRequest {
@@ -38,10 +36,5 @@ message VerifyRequest {
 
 message VerifyResponse {
     bool verified = 1;
-    Error error = 2;
 }
 
-message Error {
-    uint32 code = 1;
-    string info = 2;
-}
