@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "github.com/postie-labs/go-postie-proto/qr";
+option go_package = "github.com/postie-labs/proto/qr";
 
 message Data {
     string owner = 1;

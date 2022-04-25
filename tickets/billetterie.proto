@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "google.golang.org/grpc/examples/route_guide/routeguide";
+option go_package = "github.com/postie-labs/proto/tickets";
 
 // Service
 service Billetterie {

@@ -1,4 +1,4 @@
-module github.com/postie-labs/go-postie-proto
+module github.com/postie-labs/proto
 
 go 1.17
 
