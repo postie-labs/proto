@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "github.com/postie-labs/go-postie-proto/qr";
+
+message Data {
+    string owner = 1;
+    string token_id = 2;
+}
+
+message Signature {
+    bytes sig_bytes = 1;
+    string public_key = 2;
+}
+
+message Code {
+    Data data = 1;
+    Signature signature = 2;
+}
