@@ -9,10 +9,11 @@ message Data {
 
 message Signature {
     bytes sig_bytes = 1;
-    string public_key = 2;
+    bytes public_key = 2;
 }
 
 message Code {
     Data data = 1;
     Signature signature = 2;
 }
+
