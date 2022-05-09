@@ -12,10 +12,33 @@ message TxTransfer {
 
 // Query
 message QueryAllInfo {
+    message AllInfo {
+        string token_id = 1;
+        optional bool include_expired = 2;
+    }
     AllInfo all_nft_info = 1;
 }
+message QueryAllInfoResponse {
+    message Access {
+        string owner = 1;
+        repeated string approvals = 2;
+    }
+    message Info {
+        string token_uri = 1;
+        Extension extension = 2;
+    }
+    Access access = 1;
+    Info info = 2;
+}
 message QueryInfo {
+    message Info {
+        string token_id = 1;
+    }
     Info nft_info = 1;
+}
+message QueryInfoResponse {
+    string token_uri = 1;
+    Extension extension = 2;
 }
 
 // Messages
@@ -37,11 +60,4 @@ message Extension {
 message Attribute {
     string key = 1;
     string value = 2;
-}
-message AllInfo {
-    string token_id = 1;
-    optional bool include_expired = 2;
-}
-message Info {
-    string token_id = 1;
 }
