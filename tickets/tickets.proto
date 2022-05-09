@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+option go_package = "github.com/postie-labs/proto/tickets";
+
+// Transaction
+message TxMint {
+    Mint mint = 1;
+}
+message TxTransfer {
+    Transfer transfer_nft = 1;
+}
+
+// Query
+message QueryAllInfo {
+    AllInfo all_nft_info = 1;
+}
+message QueryInfo {
+    Info nft_info = 1;
+}
+
+// Messages
+message Mint {
+    string owner  = 1;
+    string token_id = 2;
+    string token_uri = 3;
+    Extension extension = 4;
+}
+message Transfer {
+    string recipient = 1;
+    string token_id = 2;
+}
+message Extension {
+    int64 not_valid_before = 1;
+    int64 not_valid_after = 2;
+    repeated Attribute attributes = 3;
+}
+message Attribute {
+    string key = 1;
+    string value = 2;
+}
+message AllInfo {
+    string token_id = 1;
+    optional bool include_expired = 2;
+}
+message Info {
+    string token_id = 1;
+}

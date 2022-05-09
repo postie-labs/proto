@@ -4,7 +4,7 @@
 // - protoc             v3.19.4
 // source: billetterie.proto
 
-package tickets
+package billetterie
 
 import (
 	context "context"

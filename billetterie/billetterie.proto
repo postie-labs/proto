@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "github.com/postie-labs/proto/tickets";
+option go_package = "github.com/postie-labs/proto/billetterie";
 
 // Service
 service Billetterie {
