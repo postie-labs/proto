@@ -46,6 +46,15 @@ message QueryInfoResponse {
     }
     Result query_result = 1;
 }
+message QueryList {
+    message List {
+        string owner = 1;
+    }
+    List all_tokens = 1;
+}
+message QueryListResponse {
+    repeated string tokens = 1;
+}
 
 // Messages
 message Mint {

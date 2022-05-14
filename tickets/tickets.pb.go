@@ -304,6 +304,100 @@ func (x *QueryInfoResponse) GetQueryResult() *QueryInfoResponse_Result {
 	return nil
 }
 
+type QueryList struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	AllTokens *QueryList_List `protobuf:"bytes,1,opt,name=all_tokens,json=allTokens,proto3" json:"all_tokens,omitempty"`
+}
+
+func (x *QueryList) Reset() {
+	*x = QueryList{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_tickets_proto_msgTypes[6]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *QueryList) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*QueryList) ProtoMessage() {}
+
+func (x *QueryList) ProtoReflect() protoreflect.Message {
+	mi := &file_tickets_proto_msgTypes[6]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use QueryList.ProtoReflect.Descriptor instead.
+func (*QueryList) Descriptor() ([]byte, []int) {
+	return file_tickets_proto_rawDescGZIP(), []int{6}
+}
+
+func (x *QueryList) GetAllTokens() *QueryList_List {
+	if x != nil {
+		return x.AllTokens
+	}
+	return nil
+}
+
+type QueryListResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Tokens []string `protobuf:"bytes,1,rep,name=tokens,proto3" json:"tokens,omitempty"`
+}
+
+func (x *QueryListResponse) Reset() {
+	*x = QueryListResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_tickets_proto_msgTypes[7]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *QueryListResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*QueryListResponse) ProtoMessage() {}
+
+func (x *QueryListResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_tickets_proto_msgTypes[7]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use QueryListResponse.ProtoReflect.Descriptor instead.
+func (*QueryListResponse) Descriptor() ([]byte, []int) {
+	return file_tickets_proto_rawDescGZIP(), []int{7}
+}
+
+func (x *QueryListResponse) GetTokens() []string {
+	if x != nil {
+		return x.Tokens
+	}
+	return nil
+}
+
 // Messages
 type Mint struct {
 	state         protoimpl.MessageState
@@ -319,7 +413,7 @@ type Mint struct {
 func (x *Mint) Reset() {
 	*x = Mint{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_tickets_proto_msgTypes[6]
+		mi := &file_tickets_proto_msgTypes[8]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -332,7 +426,7 @@ func (x *Mint) String() string {
 func (*Mint) ProtoMessage() {}
 
 func (x *Mint) ProtoReflect() protoreflect.Message {
-	mi := &file_tickets_proto_msgTypes[6]
+	mi := &file_tickets_proto_msgTypes[8]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -345,7 +439,7 @@ func (x *Mint) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Mint.ProtoReflect.Descriptor instead.
 func (*Mint) Descriptor() ([]byte, []int) {
-	return file_tickets_proto_rawDescGZIP(), []int{6}
+	return file_tickets_proto_rawDescGZIP(), []int{8}
 }
 
 func (x *Mint) GetOwner() string {
@@ -388,7 +482,7 @@ type Transfer struct {
 func (x *Transfer) Reset() {
 	*x = Transfer{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_tickets_proto_msgTypes[7]
+		mi := &file_tickets_proto_msgTypes[9]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -401,7 +495,7 @@ func (x *Transfer) String() string {
 func (*Transfer) ProtoMessage() {}
 
 func (x *Transfer) ProtoReflect() protoreflect.Message {
-	mi := &file_tickets_proto_msgTypes[7]
+	mi := &file_tickets_proto_msgTypes[9]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -414,7 +508,7 @@ func (x *Transfer) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Transfer.ProtoReflect.Descriptor instead.
 func (*Transfer) Descriptor() ([]byte, []int) {
-	return file_tickets_proto_rawDescGZIP(), []int{7}
+	return file_tickets_proto_rawDescGZIP(), []int{9}
 }
 
 func (x *Transfer) GetRecipient() string {
@@ -444,7 +538,7 @@ type Extension struct {
 func (x *Extension) Reset() {
 	*x = Extension{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_tickets_proto_msgTypes[8]
+		mi := &file_tickets_proto_msgTypes[10]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -457,7 +551,7 @@ func (x *Extension) String() string {
 func (*Extension) ProtoMessage() {}
 
 func (x *Extension) ProtoReflect() protoreflect.Message {
-	mi := &file_tickets_proto_msgTypes[8]
+	mi := &file_tickets_proto_msgTypes[10]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -470,7 +564,7 @@ func (x *Extension) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Extension.ProtoReflect.Descriptor instead.
 func (*Extension) Descriptor() ([]byte, []int) {
-	return file_tickets_proto_rawDescGZIP(), []int{8}
+	return file_tickets_proto_rawDescGZIP(), []int{10}
 }
 
 func (x *Extension) GetNotValidBefore() int64 {
@@ -506,7 +600,7 @@ type Attribute struct {
 func (x *Attribute) Reset() {
 	*x = Attribute{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_tickets_proto_msgTypes[9]
+		mi := &file_tickets_proto_msgTypes[11]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -519,7 +613,7 @@ func (x *Attribute) String() string {
 func (*Attribute) ProtoMessage() {}
 
 func (x *Attribute) ProtoReflect() protoreflect.Message {
-	mi := &file_tickets_proto_msgTypes[9]
+	mi := &file_tickets_proto_msgTypes[11]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -532,7 +626,7 @@ func (x *Attribute) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Attribute.ProtoReflect.Descriptor instead.
 func (*Attribute) Descriptor() ([]byte, []int) {
-	return file_tickets_proto_rawDescGZIP(), []int{9}
+	return file_tickets_proto_rawDescGZIP(), []int{11}
 }
 
 func (x *Attribute) GetKey() string {
@@ -561,7 +655,7 @@ type QueryAllInfo_AllInfo struct {
 func (x *QueryAllInfo_AllInfo) Reset() {
 	*x = QueryAllInfo_AllInfo{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_tickets_proto_msgTypes[10]
+		mi := &file_tickets_proto_msgTypes[12]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -574,7 +668,7 @@ func (x *QueryAllInfo_AllInfo) String() string {
 func (*QueryAllInfo_AllInfo) ProtoMessage() {}
 
 func (x *QueryAllInfo_AllInfo) ProtoReflect() protoreflect.Message {
-	mi := &file_tickets_proto_msgTypes[10]
+	mi := &file_tickets_proto_msgTypes[12]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -616,7 +710,7 @@ type QueryAllInfoResponse_Access struct {
 func (x *QueryAllInfoResponse_Access) Reset() {
 	*x = QueryAllInfoResponse_Access{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_tickets_proto_msgTypes[11]
+		mi := &file_tickets_proto_msgTypes[13]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -629,7 +723,7 @@ func (x *QueryAllInfoResponse_Access) String() string {
 func (*QueryAllInfoResponse_Access) ProtoMessage() {}
 
 func (x *QueryAllInfoResponse_Access) ProtoReflect() protoreflect.Message {
-	mi := &file_tickets_proto_msgTypes[11]
+	mi := &file_tickets_proto_msgTypes[13]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -671,7 +765,7 @@ type QueryAllInfoResponse_Info struct {
 func (x *QueryAllInfoResponse_Info) Reset() {
 	*x = QueryAllInfoResponse_Info{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_tickets_proto_msgTypes[12]
+		mi := &file_tickets_proto_msgTypes[14]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -684,7 +778,7 @@ func (x *QueryAllInfoResponse_Info) String() string {
 func (*QueryAllInfoResponse_Info) ProtoMessage() {}
 
 func (x *QueryAllInfoResponse_Info) ProtoReflect() protoreflect.Message {
-	mi := &file_tickets_proto_msgTypes[12]
+	mi := &file_tickets_proto_msgTypes[14]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -726,7 +820,7 @@ type QueryAllInfoResponse_Result struct {
 func (x *QueryAllInfoResponse_Result) Reset() {
 	*x = QueryAllInfoResponse_Result{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_tickets_proto_msgTypes[13]
+		mi := &file_tickets_proto_msgTypes[15]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -739,7 +833,7 @@ func (x *QueryAllInfoResponse_Result) String() string {
 func (*QueryAllInfoResponse_Result) ProtoMessage() {}
 
 func (x *QueryAllInfoResponse_Result) ProtoReflect() protoreflect.Message {
-	mi := &file_tickets_proto_msgTypes[13]
+	mi := &file_tickets_proto_msgTypes[15]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -780,7 +874,7 @@ type QueryInfo_Info struct {
 func (x *QueryInfo_Info) Reset() {
 	*x = QueryInfo_Info{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_tickets_proto_msgTypes[14]
+		mi := &file_tickets_proto_msgTypes[16]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -793,7 +887,7 @@ func (x *QueryInfo_Info) String() string {
 func (*QueryInfo_Info) ProtoMessage() {}
 
 func (x *QueryInfo_Info) ProtoReflect() protoreflect.Message {
-	mi := &file_tickets_proto_msgTypes[14]
+	mi := &file_tickets_proto_msgTypes[16]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -828,7 +922,7 @@ type QueryInfoResponse_Result struct {
 func (x *QueryInfoResponse_Result) Reset() {
 	*x = QueryInfoResponse_Result{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_tickets_proto_msgTypes[15]
+		mi := &file_tickets_proto_msgTypes[17]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -841,7 +935,7 @@ func (x *QueryInfoResponse_Result) String() string {
 func (*QueryInfoResponse_Result) ProtoMessage() {}
 
 func (x *QueryInfoResponse_Result) ProtoReflect() protoreflect.Message {
-	mi := &file_tickets_proto_msgTypes[15]
+	mi := &file_tickets_proto_msgTypes[17]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -869,6 +963,53 @@ func (x *QueryInfoResponse_Result) GetExtension() *Extension {
 		return x.Extension
 	}
 	return nil
+}
+
+type QueryList_List struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Owner string `protobuf:"bytes,1,opt,name=owner,proto3" json:"owner,omitempty"`
+}
+
+func (x *QueryList_List) Reset() {
+	*x = QueryList_List{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_tickets_proto_msgTypes[18]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *QueryList_List) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*QueryList_List) ProtoMessage() {}
+
+func (x *QueryList_List) ProtoReflect() protoreflect.Message {
+	mi := &file_tickets_proto_msgTypes[18]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use QueryList_List.ProtoReflect.Descriptor instead.
+func (*QueryList_List) Descriptor() ([]byte, []int) {
+	return file_tickets_proto_rawDescGZIP(), []int{6, 0}
+}
+
+func (x *QueryList_List) GetOwner() string {
+	if x != nil {
+		return x.Owner
+	}
+	return ""
 }
 
 var File_tickets_proto protoreflect.FileDescriptor
@@ -929,34 +1070,43 @@ var file_tickets_proto_rawDesc = []byte{
 	0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x55, 0x72, 0x69,
 	0x12, 0x28, 0x0a, 0x09, 0x65, 0x78, 0x74, 0x65, 0x6e, 0x73, 0x69, 0x6f, 0x6e, 0x18, 0x02, 0x20,
 	0x01, 0x28, 0x0b, 0x32, 0x0a, 0x2e, 0x45, 0x78, 0x74, 0x65, 0x6e, 0x73, 0x69, 0x6f, 0x6e, 0x52,
-	0x09, 0x65, 0x78, 0x74, 0x65, 0x6e, 0x73, 0x69, 0x6f, 0x6e, 0x22, 0x7e, 0x0a, 0x04, 0x4d, 0x69,
-	0x6e, 0x74, 0x12, 0x14, 0x0a, 0x05, 0x6f, 0x77, 0x6e, 0x65, 0x72, 0x18, 0x01, 0x20, 0x01, 0x28,
-	0x09, 0x52, 0x05, 0x6f, 0x77, 0x6e, 0x65, 0x72, 0x12, 0x19, 0x0a, 0x08, 0x74, 0x6f, 0x6b, 0x65,
-	0x6e, 0x5f, 0x69, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x74, 0x6f, 0x6b, 0x65,
-	0x6e, 0x49, 0x64, 0x12, 0x1b, 0x0a, 0x09, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x5f, 0x75, 0x72, 0x69,
-	0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x55, 0x72, 0x69,
-	0x12, 0x28, 0x0a, 0x09, 0x65, 0x78, 0x74, 0x65, 0x6e, 0x73, 0x69, 0x6f, 0x6e, 0x18, 0x04, 0x20,
-	0x01, 0x28, 0x0b, 0x32, 0x0a, 0x2e, 0x45, 0x78, 0x74, 0x65, 0x6e, 0x73, 0x69, 0x6f, 0x6e, 0x52,
-	0x09, 0x65, 0x78, 0x74, 0x65, 0x6e, 0x73, 0x69, 0x6f, 0x6e, 0x22, 0x43, 0x0a, 0x08, 0x54, 0x72,
-	0x61, 0x6e, 0x73, 0x66, 0x65, 0x72, 0x12, 0x1c, 0x0a, 0x09, 0x72, 0x65, 0x63, 0x69, 0x70, 0x69,
-	0x65, 0x6e, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x72, 0x65, 0x63, 0x69, 0x70,
-	0x69, 0x65, 0x6e, 0x74, 0x12, 0x19, 0x0a, 0x08, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x5f, 0x69, 0x64,
-	0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x49, 0x64, 0x22,
-	0x89, 0x01, 0x0a, 0x09, 0x45, 0x78, 0x74, 0x65, 0x6e, 0x73, 0x69, 0x6f, 0x6e, 0x12, 0x28, 0x0a,
-	0x10, 0x6e, 0x6f, 0x74, 0x5f, 0x76, 0x61, 0x6c, 0x69, 0x64, 0x5f, 0x62, 0x65, 0x66, 0x6f, 0x72,
-	0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x0e, 0x6e, 0x6f, 0x74, 0x56, 0x61, 0x6c, 0x69,
-	0x64, 0x42, 0x65, 0x66, 0x6f, 0x72, 0x65, 0x12, 0x26, 0x0a, 0x0f, 0x6e, 0x6f, 0x74, 0x5f, 0x76,
-	0x61, 0x6c, 0x69, 0x64, 0x5f, 0x61, 0x66, 0x74, 0x65, 0x72, 0x18, 0x02, 0x20, 0x01, 0x28, 0x03,
-	0x52, 0x0d, 0x6e, 0x6f, 0x74, 0x56, 0x61, 0x6c, 0x69, 0x64, 0x41, 0x66, 0x74, 0x65, 0x72, 0x12,
-	0x2a, 0x0a, 0x0a, 0x61, 0x74, 0x74, 0x72, 0x69, 0x62, 0x75, 0x74, 0x65, 0x73, 0x18, 0x03, 0x20,
-	0x03, 0x28, 0x0b, 0x32, 0x0a, 0x2e, 0x41, 0x74, 0x74, 0x72, 0x69, 0x62, 0x75, 0x74, 0x65, 0x52,
-	0x0a, 0x61, 0x74, 0x74, 0x72, 0x69, 0x62, 0x75, 0x74, 0x65, 0x73, 0x22, 0x33, 0x0a, 0x09, 0x41,
-	0x74, 0x74, 0x72, 0x69, 0x62, 0x75, 0x74, 0x65, 0x12, 0x10, 0x0a, 0x03, 0x6b, 0x65, 0x79, 0x18,
-	0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x03, 0x6b, 0x65, 0x79, 0x12, 0x14, 0x0a, 0x05, 0x76, 0x61,
-	0x6c, 0x75, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65,
-	0x42, 0x26, 0x5a, 0x24, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x70,
-	0x6f, 0x73, 0x74, 0x69, 0x65, 0x2d, 0x6c, 0x61, 0x62, 0x73, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f,
-	0x2f, 0x74, 0x69, 0x63, 0x6b, 0x65, 0x74, 0x73, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x09, 0x65, 0x78, 0x74, 0x65, 0x6e, 0x73, 0x69, 0x6f, 0x6e, 0x22, 0x59, 0x0a, 0x09, 0x51, 0x75,
+	0x65, 0x72, 0x79, 0x4c, 0x69, 0x73, 0x74, 0x12, 0x2e, 0x0a, 0x0a, 0x61, 0x6c, 0x6c, 0x5f, 0x74,
+	0x6f, 0x6b, 0x65, 0x6e, 0x73, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0f, 0x2e, 0x51, 0x75,
+	0x65, 0x72, 0x79, 0x4c, 0x69, 0x73, 0x74, 0x2e, 0x4c, 0x69, 0x73, 0x74, 0x52, 0x09, 0x61, 0x6c,
+	0x6c, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x73, 0x1a, 0x1c, 0x0a, 0x04, 0x4c, 0x69, 0x73, 0x74, 0x12,
+	0x14, 0x0a, 0x05, 0x6f, 0x77, 0x6e, 0x65, 0x72, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05,
+	0x6f, 0x77, 0x6e, 0x65, 0x72, 0x22, 0x2b, 0x0a, 0x11, 0x51, 0x75, 0x65, 0x72, 0x79, 0x4c, 0x69,
+	0x73, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x16, 0x0a, 0x06, 0x74, 0x6f,
+	0x6b, 0x65, 0x6e, 0x73, 0x18, 0x01, 0x20, 0x03, 0x28, 0x09, 0x52, 0x06, 0x74, 0x6f, 0x6b, 0x65,
+	0x6e, 0x73, 0x22, 0x7e, 0x0a, 0x04, 0x4d, 0x69, 0x6e, 0x74, 0x12, 0x14, 0x0a, 0x05, 0x6f, 0x77,
+	0x6e, 0x65, 0x72, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x6f, 0x77, 0x6e, 0x65, 0x72,
+	0x12, 0x19, 0x0a, 0x08, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x5f, 0x69, 0x64, 0x18, 0x02, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x07, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x49, 0x64, 0x12, 0x1b, 0x0a, 0x09, 0x74,
+	0x6f, 0x6b, 0x65, 0x6e, 0x5f, 0x75, 0x72, 0x69, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08,
+	0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x55, 0x72, 0x69, 0x12, 0x28, 0x0a, 0x09, 0x65, 0x78, 0x74, 0x65,
+	0x6e, 0x73, 0x69, 0x6f, 0x6e, 0x18, 0x04, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0a, 0x2e, 0x45, 0x78,
+	0x74, 0x65, 0x6e, 0x73, 0x69, 0x6f, 0x6e, 0x52, 0x09, 0x65, 0x78, 0x74, 0x65, 0x6e, 0x73, 0x69,
+	0x6f, 0x6e, 0x22, 0x43, 0x0a, 0x08, 0x54, 0x72, 0x61, 0x6e, 0x73, 0x66, 0x65, 0x72, 0x12, 0x1c,
+	0x0a, 0x09, 0x72, 0x65, 0x63, 0x69, 0x70, 0x69, 0x65, 0x6e, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28,
+	0x09, 0x52, 0x09, 0x72, 0x65, 0x63, 0x69, 0x70, 0x69, 0x65, 0x6e, 0x74, 0x12, 0x19, 0x0a, 0x08,
+	0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x5f, 0x69, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07,
+	0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x49, 0x64, 0x22, 0x89, 0x01, 0x0a, 0x09, 0x45, 0x78, 0x74, 0x65,
+	0x6e, 0x73, 0x69, 0x6f, 0x6e, 0x12, 0x28, 0x0a, 0x10, 0x6e, 0x6f, 0x74, 0x5f, 0x76, 0x61, 0x6c,
+	0x69, 0x64, 0x5f, 0x62, 0x65, 0x66, 0x6f, 0x72, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52,
+	0x0e, 0x6e, 0x6f, 0x74, 0x56, 0x61, 0x6c, 0x69, 0x64, 0x42, 0x65, 0x66, 0x6f, 0x72, 0x65, 0x12,
+	0x26, 0x0a, 0x0f, 0x6e, 0x6f, 0x74, 0x5f, 0x76, 0x61, 0x6c, 0x69, 0x64, 0x5f, 0x61, 0x66, 0x74,
+	0x65, 0x72, 0x18, 0x02, 0x20, 0x01, 0x28, 0x03, 0x52, 0x0d, 0x6e, 0x6f, 0x74, 0x56, 0x61, 0x6c,
+	0x69, 0x64, 0x41, 0x66, 0x74, 0x65, 0x72, 0x12, 0x2a, 0x0a, 0x0a, 0x61, 0x74, 0x74, 0x72, 0x69,
+	0x62, 0x75, 0x74, 0x65, 0x73, 0x18, 0x03, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x0a, 0x2e, 0x41, 0x74,
+	0x74, 0x72, 0x69, 0x62, 0x75, 0x74, 0x65, 0x52, 0x0a, 0x61, 0x74, 0x74, 0x72, 0x69, 0x62, 0x75,
+	0x74, 0x65, 0x73, 0x22, 0x33, 0x0a, 0x09, 0x41, 0x74, 0x74, 0x72, 0x69, 0x62, 0x75, 0x74, 0x65,
+	0x12, 0x10, 0x0a, 0x03, 0x6b, 0x65, 0x79, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x03, 0x6b,
+	0x65, 0x79, 0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28,
+	0x09, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x42, 0x26, 0x5a, 0x24, 0x67, 0x69, 0x74, 0x68,
+	0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x70, 0x6f, 0x73, 0x74, 0x69, 0x65, 0x2d, 0x6c, 0x61,
+	0x62, 0x73, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x74, 0x69, 0x63, 0x6b, 0x65, 0x74, 0x73,
+	0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -971,7 +1121,7 @@ func file_tickets_proto_rawDescGZIP() []byte {
 	return file_tickets_proto_rawDescData
 }
 
-var file_tickets_proto_msgTypes = make([]protoimpl.MessageInfo, 16)
+var file_tickets_proto_msgTypes = make([]protoimpl.MessageInfo, 19)
 var file_tickets_proto_goTypes = []interface{}{
 	(*TxMint)(nil),                      // 0: TxMint
 	(*TxTransfer)(nil),                  // 1: TxTransfer
@@ -979,35 +1129,39 @@ var file_tickets_proto_goTypes = []interface{}{
 	(*QueryAllInfoResponse)(nil),        // 3: QueryAllInfoResponse
 	(*QueryInfo)(nil),                   // 4: QueryInfo
 	(*QueryInfoResponse)(nil),           // 5: QueryInfoResponse
-	(*Mint)(nil),                        // 6: Mint
-	(*Transfer)(nil),                    // 7: Transfer
-	(*Extension)(nil),                   // 8: Extension
-	(*Attribute)(nil),                   // 9: Attribute
-	(*QueryAllInfo_AllInfo)(nil),        // 10: QueryAllInfo.AllInfo
-	(*QueryAllInfoResponse_Access)(nil), // 11: QueryAllInfoResponse.Access
-	(*QueryAllInfoResponse_Info)(nil),   // 12: QueryAllInfoResponse.Info
-	(*QueryAllInfoResponse_Result)(nil), // 13: QueryAllInfoResponse.Result
-	(*QueryInfo_Info)(nil),              // 14: QueryInfo.Info
-	(*QueryInfoResponse_Result)(nil),    // 15: QueryInfoResponse.Result
+	(*QueryList)(nil),                   // 6: QueryList
+	(*QueryListResponse)(nil),           // 7: QueryListResponse
+	(*Mint)(nil),                        // 8: Mint
+	(*Transfer)(nil),                    // 9: Transfer
+	(*Extension)(nil),                   // 10: Extension
+	(*Attribute)(nil),                   // 11: Attribute
+	(*QueryAllInfo_AllInfo)(nil),        // 12: QueryAllInfo.AllInfo
+	(*QueryAllInfoResponse_Access)(nil), // 13: QueryAllInfoResponse.Access
+	(*QueryAllInfoResponse_Info)(nil),   // 14: QueryAllInfoResponse.Info
+	(*QueryAllInfoResponse_Result)(nil), // 15: QueryAllInfoResponse.Result
+	(*QueryInfo_Info)(nil),              // 16: QueryInfo.Info
+	(*QueryInfoResponse_Result)(nil),    // 17: QueryInfoResponse.Result
+	(*QueryList_List)(nil),              // 18: QueryList.List
 }
 var file_tickets_proto_depIdxs = []int32{
-	6,  // 0: TxMint.mint:type_name -> Mint
-	7,  // 1: TxTransfer.transfer_nft:type_name -> Transfer
-	10, // 2: QueryAllInfo.all_nft_info:type_name -> QueryAllInfo.AllInfo
-	13, // 3: QueryAllInfoResponse.query_result:type_name -> QueryAllInfoResponse.Result
-	14, // 4: QueryInfo.nft_info:type_name -> QueryInfo.Info
-	15, // 5: QueryInfoResponse.query_result:type_name -> QueryInfoResponse.Result
-	8,  // 6: Mint.extension:type_name -> Extension
-	9,  // 7: Extension.attributes:type_name -> Attribute
-	8,  // 8: QueryAllInfoResponse.Info.extension:type_name -> Extension
-	11, // 9: QueryAllInfoResponse.Result.access:type_name -> QueryAllInfoResponse.Access
-	12, // 10: QueryAllInfoResponse.Result.info:type_name -> QueryAllInfoResponse.Info
-	8,  // 11: QueryInfoResponse.Result.extension:type_name -> Extension
-	12, // [12:12] is the sub-list for method output_type
-	12, // [12:12] is the sub-list for method input_type
-	12, // [12:12] is the sub-list for extension type_name
-	12, // [12:12] is the sub-list for extension extendee
-	0,  // [0:12] is the sub-list for field type_name
+	8,  // 0: TxMint.mint:type_name -> Mint
+	9,  // 1: TxTransfer.transfer_nft:type_name -> Transfer
+	12, // 2: QueryAllInfo.all_nft_info:type_name -> QueryAllInfo.AllInfo
+	15, // 3: QueryAllInfoResponse.query_result:type_name -> QueryAllInfoResponse.Result
+	16, // 4: QueryInfo.nft_info:type_name -> QueryInfo.Info
+	17, // 5: QueryInfoResponse.query_result:type_name -> QueryInfoResponse.Result
+	18, // 6: QueryList.all_tokens:type_name -> QueryList.List
+	10, // 7: Mint.extension:type_name -> Extension
+	11, // 8: Extension.attributes:type_name -> Attribute
+	10, // 9: QueryAllInfoResponse.Info.extension:type_name -> Extension
+	13, // 10: QueryAllInfoResponse.Result.access:type_name -> QueryAllInfoResponse.Access
+	14, // 11: QueryAllInfoResponse.Result.info:type_name -> QueryAllInfoResponse.Info
+	10, // 12: QueryInfoResponse.Result.extension:type_name -> Extension
+	13, // [13:13] is the sub-list for method output_type
+	13, // [13:13] is the sub-list for method input_type
+	13, // [13:13] is the sub-list for extension type_name
+	13, // [13:13] is the sub-list for extension extendee
+	0,  // [0:13] is the sub-list for field type_name
 }
 
 func init() { file_tickets_proto_init() }
@@ -1089,7 +1243,7 @@ func file_tickets_proto_init() {
 			}
 		}
 		file_tickets_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Mint); i {
+			switch v := v.(*QueryList); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1101,7 +1255,7 @@ func file_tickets_proto_init() {
 			}
 		}
 		file_tickets_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Transfer); i {
+			switch v := v.(*QueryListResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1113,7 +1267,7 @@ func file_tickets_proto_init() {
 			}
 		}
 		file_tickets_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Extension); i {
+			switch v := v.(*Mint); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1125,7 +1279,7 @@ func file_tickets_proto_init() {
 			}
 		}
 		file_tickets_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Attribute); i {
+			switch v := v.(*Transfer); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1137,7 +1291,7 @@ func file_tickets_proto_init() {
 			}
 		}
 		file_tickets_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*QueryAllInfo_AllInfo); i {
+			switch v := v.(*Extension); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1149,7 +1303,7 @@ func file_tickets_proto_init() {
 			}
 		}
 		file_tickets_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*QueryAllInfoResponse_Access); i {
+			switch v := v.(*Attribute); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1161,7 +1315,7 @@ func file_tickets_proto_init() {
 			}
 		}
 		file_tickets_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*QueryAllInfoResponse_Info); i {
+			switch v := v.(*QueryAllInfo_AllInfo); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1173,7 +1327,7 @@ func file_tickets_proto_init() {
 			}
 		}
 		file_tickets_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*QueryAllInfoResponse_Result); i {
+			switch v := v.(*QueryAllInfoResponse_Access); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1185,7 +1339,7 @@ func file_tickets_proto_init() {
 			}
 		}
 		file_tickets_proto_msgTypes[14].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*QueryInfo_Info); i {
+			switch v := v.(*QueryAllInfoResponse_Info); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1197,6 +1351,30 @@ func file_tickets_proto_init() {
 			}
 		}
 		file_tickets_proto_msgTypes[15].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*QueryAllInfoResponse_Result); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_tickets_proto_msgTypes[16].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*QueryInfo_Info); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_tickets_proto_msgTypes[17].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*QueryInfoResponse_Result); i {
 			case 0:
 				return &v.state
@@ -1208,15 +1386,27 @@ func file_tickets_proto_init() {
 				return nil
 			}
 		}
+		file_tickets_proto_msgTypes[18].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*QueryList_List); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
-	file_tickets_proto_msgTypes[10].OneofWrappers = []interface{}{}
+	file_tickets_proto_msgTypes[12].OneofWrappers = []interface{}{}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_tickets_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   16,
+			NumMessages:   19,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
