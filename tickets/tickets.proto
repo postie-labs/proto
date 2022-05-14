@@ -53,7 +53,10 @@ message QueryList {
     List all_tokens = 1;
 }
 message QueryListResponse {
-    repeated string tokens = 1;
+    message Result {
+        repeated string tokens = 1;
+    }
+    Result query_result = 1;
 }
 
 // Messages
