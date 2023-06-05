@@ -4,11 +4,6 @@ package postie.v1.client;
 
 option go_package = "github.com/postie-labs/proto/postie/v1/client";
 
-message MsgCapsule {
-  bytes serialized_msg = 1;
-  Signature signature = 2;
-}
-
 message Msg {
   enum Type {
     TYPE_UNSPECIFIED = 0;
@@ -21,11 +16,33 @@ message Msg {
   }
 
   Type type = 1;
-  bytes data = 2;
-  map<string, bytes> metadata = 3;
+  oneof msg {
+    MsgHello hello = 2;
+    MsgHelloAck hello_ack = 3;
+    MsgSend send = 4;
+    MsgSendAck send_ack = 5;
+    MsgRead read = 6;
+    MsgReadAck read_ack = 7;
+  }
 }
 
-message Signature {
-  bytes pub_key = 1;
-  bytes sig_bytes = 2;
+message MsgHello {
+}
+
+message MsgHelloAck {
+}
+
+message MsgSend {
+  bytes data = 1;
+  map<string, bytes> metadata = 2;
+}
+
+message MsgSendAck {
+  bytes hash = 1;
+}
+
+message MsgRead {
+}
+
+message MsgReadAck {
 }
