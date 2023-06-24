@@ -7,29 +7,26 @@ option go_package = "github.com/postie-labs/proto/postie/v1/client";
 message Msg {
   enum Type {
     TYPE_UNSPECIFIED = 0;
-    TYPE_HELLO = 1;
-    TYPE_HELLO_ACK = 2;
+    TYPE_ACK = 1;
+    TYPE_HELLO = 2;
     TYPE_SEND = 3;
-    TYPE_SEND_ACK = 4;
-    TYPE_READ = 5;
-    TYPE_READ_ACK = 6;
+    TYPE_READ = 4;
   }
 
   Type type = 1;
   oneof msg {
-    MsgHello hello = 2;
-    MsgHelloAck hello_ack = 3;
+    MsgAck ack = 2;
+    MsgHello hello = 3;
     MsgSend send = 4;
-    MsgSendAck send_ack = 5;
-    MsgRead read = 6;
-    MsgReadAck read_ack = 7;
+    MsgRead read = 5;
   }
 }
 
-message MsgHello {
+message MsgAck {
+  int64 timestamp = 1;
 }
 
-message MsgHelloAck {
+message MsgHello {
 }
 
 message MsgSend {
@@ -37,12 +34,5 @@ message MsgSend {
   map<string, bytes> metadata = 2;
 }
 
-message MsgSendAck {
-  bytes hash = 1;
-}
-
 message MsgRead {
-}
-
-message MsgReadAck {
 }
