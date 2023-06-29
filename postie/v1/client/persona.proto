@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package postie.v1.client;
+
+option go_package = "github.com/postie-labs/proto/postie/v1/client";
+
+message Persona {
+  bytes pub_key = 1;
+  string nickname = 2;
+  map<string,bytes> metadata = 3;
+}
