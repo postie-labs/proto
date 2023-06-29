@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package postie.v1.client;
 
+import "persona.proto";
+
 option go_package = "github.com/postie-labs/proto/postie/v1/client";
 
 message Msg {
@@ -27,6 +29,7 @@ message MsgAck {
 }
 
 message MsgHello {
+  Persona persona = 1;
 }
 
 message MsgSend {
@@ -36,3 +39,4 @@ message MsgSend {
 
 message MsgRead {
 }
+
