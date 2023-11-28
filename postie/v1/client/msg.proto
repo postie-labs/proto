@@ -35,6 +35,7 @@ message MsgHello {
 message MsgSend {
   bytes data = 1;
   map<string, bytes> metadata = 2;
+  optional int64 parent_timestamp = 3;
 }
 
 message MsgRead {
