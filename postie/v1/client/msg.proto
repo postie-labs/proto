@@ -41,4 +41,5 @@ message MsgSend {
 message MsgReact {
   int64 target_timestamp = 1;
   string reaction = 2;
+  optional int64 parent_timestamp = 3;
 }
