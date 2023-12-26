@@ -25,7 +25,7 @@ message Msg {
 }
 
 message MsgAck {
-  int64 timestamp = 1;
+  int64 target_msg_timestamp = 1;
 }
 
 message MsgHello {
@@ -35,11 +35,11 @@ message MsgHello {
 message MsgSend {
   bytes data = 1;
   map<string, bytes> metadata = 2;
-  optional int64 parent_timestamp = 3;
+  optional int64 parent_msg_timestamp = 3;
 }
 
 message MsgReact {
-  int64 target_timestamp = 1;
+  int64 target_msg_timestamp = 1;
   string reaction = 2;
-  optional int64 parent_timestamp = 3;
+  optional int64 parent_msg_timestamp = 3;
 }
