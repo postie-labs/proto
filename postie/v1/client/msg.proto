@@ -12,7 +12,7 @@ message Msg {
     TYPE_ACK = 1;
     TYPE_HELLO = 2;
     TYPE_SEND = 3;
-    TYPE_READ = 4;
+    TYPE_REACT = 4;
   }
 
   Type type = 1;
@@ -20,7 +20,7 @@ message Msg {
     MsgAck ack = 2;
     MsgHello hello = 3;
     MsgSend send = 4;
-    MsgRead read = 5;
+    MsgReact react = 5;
   }
 }
 
@@ -38,6 +38,7 @@ message MsgSend {
   optional int64 parent_timestamp = 3;
 }
 
-message MsgRead {
+message MsgReact {
+  int64 target_timestamp = 1;
+  string reaction = 2;
 }
-
