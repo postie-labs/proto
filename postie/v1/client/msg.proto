@@ -13,6 +13,7 @@ message Msg {
     TYPE_HELLO = 2;
     TYPE_SEND = 3;
     TYPE_REACT = 4;
+    TYPE_UPDATE = 5;
   }
 
   Type type = 1;
@@ -21,6 +22,7 @@ message Msg {
     MsgHello hello = 3;
     MsgSend send = 4;
     MsgReact react = 5;
+    MsgUpdate update = 6;
   }
 }
 
@@ -42,4 +44,11 @@ message MsgReact {
   int64 target_msg_timestamp = 1;
   string reaction = 2;
   optional int64 parent_msg_timestamp = 3;
+}
+
+message MsgUpdate {
+  int64 target_msg_timestamp = 1;
+  bytes data = 2;
+  map<string, bytes> metadata = 3;
+  optional int64 parent_msg_timestamp = 4;
 }
